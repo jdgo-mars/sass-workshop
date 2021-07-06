@@ -1,0 +1,23 @@
+{
+  "name": "sass-workshop",
+  "version": "1.0.0",
+  "description": "Sass workshop for Flag",
+  "main": "index.js",
+  "scripts": {
+    "dev": "serve ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdmartins/sass-workshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdmartins/sass-workshop/issues"
+  },
+  "homepage": "https://github.com/jdmartins/sass-workshop#readme",
+  "devDependencies": {
+    "sass": "^1.35.1"
+  }
+}
