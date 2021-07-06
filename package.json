@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/jdmartins/sass-workshop#readme",
   "devDependencies": {
-    "sass": "^1.35.1"
+    "sass": "^1.35.1",
+    "serve": "^12.0.0"
   }
 }
