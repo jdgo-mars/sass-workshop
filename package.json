@@ -4,7 +4,8 @@
   "description": "Sass workshop for Flag",
   "main": "index.js",
   "scripts": {
-    "dev": "node_modules/.bin/concurrently \"node_modules/.bin/sass -w src/scss/main.scss assets/css/styles.css\" \"serve\""
+    "dev": "node_modules/.bin/concurrently \"node_modules/.bin/sass -w src/scss/main.scss assets/css/styles.css\" \"serve\"",
+    "deploy": "node_modules/.bin/surge"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "devDependencies": {
     "concurrently": "^6.2.0",
     "sass": "^1.35.1",
-    "serve": "^12.0.0"
+    "serve": "^12.0.0",
+    "surge": "^0.23.0"
   }
 }
