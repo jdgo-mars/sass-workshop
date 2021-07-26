@@ -1,11 +1,11 @@
 // Igualdade
-@debug 1px == 2px;
-@debug 1px != 1em;
-@debug 1 != 1px;
-@debug 96px == 1in;
+@debug 1px == 2px; // false 
+@debug 1px != 1em; // true
+@debug 1 != 1px; // true
+@debug 96px == 1in; // true
 
-@debug "Helvetica" == Helvetica;
-@debug "Helvetica" != "Arial"; 
+@debug "Helvetica" == Helvetica; // true
+@debug "Helvetica" != "Arial"; // true
 
 @debug rgba(179, 115, 153, 0.5) == rgba(179, 115, 153, 0.8); 
 
@@ -18,8 +18,8 @@
 
 
 // Relacional
-@debug 100 > 50;
-@debug 10px < 17px;
+@debug 100 > 50; // true
+@debug 10px < 17px; 
 @debug 96px >= 1in;
 @debug 1000ms <= 1s;
 
@@ -39,3 +39,16 @@
 @debug "Helvetica" + " Neue"; // "Helvetica Neue"
 @debug sans- + serif; // sans-serif
 @debug sans - serif; // sans-serif
+
+$font: Helvetica;
+.header {
+    font-family: $font + " Neue";
+    
+}
+
+/*
+.classe {
+  font-family: "Helvetica Neue";
+}
+
+*/

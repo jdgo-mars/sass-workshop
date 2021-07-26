@@ -1,19 +1,19 @@
   
   // Geometry Example
-  @mixin geometry($size, $circle: false) {
+  @mixin geometry($size, $border-radius: false) {
     width: $size;
     height: $size;
-  
-    @if $circle {
+    @if $border-radius {
       border-radius: $size / 2;
     }
   }
   
   .square {
-    @include geometry(100px, $circle: false);
+    @include geometry(100px, $border-radius: false);
   }
+
   .circle {
-    @include geometry(100px, $circle: true);
+    @include geometry(100px, $border-radius: true);
   }
   
 
@@ -34,7 +34,7 @@
     }
   }
   
-  .banner {
+  .navbar {
     @include theme-colors($light-theme: true);
     body.dark & {
       @include theme-colors($light-theme: false);

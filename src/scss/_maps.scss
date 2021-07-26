@@ -3,8 +3,15 @@ $font-weights: ("regular": 400, "medium": 500, "bold": 700);
 @debug map.get($font-weights, "medium"); // 500
 @debug map.get($font-weights, "extra-bold"); // null
 
+.paragraph {
+    font-weight: map.get($font-weights, "regular");
+}
 
-$light-weights: ("lightest": 100, "light": 300);
+$light-weights: ("light": 300);
 $heavy-weights: ("medium": 500, "bold": 700);
 
-@debug map.merge($light-weights, $heavy-weights); 
+$output: map.merge($light-weights, $heavy-weights); // ("light": 300, "medium": 500, "bold": 700)
+
+.classe {
+    font-weight: map.get($output, "light");
+}

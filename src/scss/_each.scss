@@ -1,23 +1,32 @@
 // Com uma lista
 $sizes: 40px, 50px, 80px;
 
+// iteracao 0 - o valor de $size e `40px`
+// iteracao 1 - o valor de $size e `50px`
+// iteracao 2 - o valor de $size e `80px`
 @each $size in $sizes { 
-  .icon-#{$size} {
-    font-size: $size;
+  .icon-#{$size} { // iteracao 0 a class vai ser .icon-40px  
+    font-size: $size; 
     height: $size;
     width: $size;
   }
 }
 
-
 // Com um mapa
 $icons: ("eye": "👀", "start": "🏁", "stop": "🛑");
+// map syntax (<chave>: <valor>, ...);
 
-@each $name, $glyph in $icons {
-  .icon-#{$name}:before {
+
+// iteracao 0 - o valor de $chave e `eye` e o valor de `$valor` e `👀`
+// iteracao 1 - o valor de $chave e `start` e o valor de $valor e `🏁`
+// iteracao 2 - o valor de $chave e `stop` e o valor de $valor e `🛑`
+@each $chave, $valor in $icons {
+  .icon-#{$chave}:before { // iteracao 0 class e .icon-eye
     display: inline-block;
     font-family: "Icon Font";
-    content: $glyph;
+    content: $valor; // iteracao 0 ira ser `👀`
   }
 }
+
+// livraria icons -> https://fontawesome.com/
 
