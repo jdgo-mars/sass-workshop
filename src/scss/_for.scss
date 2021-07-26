@@ -1,10 +1,8 @@
-@mixin corner-icon($name, $top-or-bottom, $left-or-right) {
-    .icon-#{$name} {
-      background-image: url("/icons/#{$name}.svg");
-      position: absolute;
-      #{$top-or-bottom}: 0;
-      #{$left-or-right}: 0;
-    }
+$h1-fontsize: 60px;
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    background-color: aqua;
+    width: $h1-fontsize / $i;
   }
-  
-  @include corner-icon("mail", top, left);
+}

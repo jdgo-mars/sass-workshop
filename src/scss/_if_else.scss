@@ -1,10 +1,43 @@
-@mixin corner-icon($name, $top-or-bottom, $left-or-right) {
-    .icon-#{$name} {
-      background-image: url("/icons/#{$name}.svg");
-      position: absolute;
-      #{$top-or-bottom}: 0;
-      #{$left-or-right}: 0;
+  
+  // Geometry Example
+  @mixin geometry($size, $circle: false) {
+    width: $size;
+    height: $size;
+  
+    @if $circle {
+      border-radius: $size / 2;
     }
   }
   
-  @include corner-icon("mail", top, left);
+  .square {
+    @include geometry(100px, $circle: false);
+  }
+  .circle {
+    @include geometry(100px, $circle: true);
+  }
+  
+
+
+  // Theme Example
+  $light-background: #f2ece4;
+  $light-text: #036;
+  $dark-background: #6b717f;
+  $dark-text: #d2e1dd;
+  
+  @mixin theme-colors($light-theme: true) {
+    @if $light-theme {
+      background-color: $light-background;
+      color: $light-text;
+    } @else {
+      background-color: $dark-background;
+      color: $dark-text;
+    }
+  }
+  
+  .banner {
+    @include theme-colors($light-theme: true);
+    body.dark & {
+      @include theme-colors($light-theme: false);
+    }
+  }
+  

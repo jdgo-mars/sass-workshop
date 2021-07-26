@@ -1,0 +1,41 @@
+// Igualdade
+@debug 1px == 2px;
+@debug 1px != 1em;
+@debug 1 != 1px;
+@debug 96px == 1in;
+
+@debug "Helvetica" == Helvetica;
+@debug "Helvetica" != "Arial"; 
+
+@debug rgba(179, 115, 153, 0.5) == rgba(179, 115, 153, 0.8); 
+
+@debug (5px 7px) == (5px 7px 10px);
+@debug (5px 7px 10px) != (10px 14px 20px);
+
+@debug true == true;
+@debug true == 2;
+@debug true != false;
+
+
+// Relacional
+@debug 100 > 50;
+@debug 10px < 17px;
+@debug 96px >= 1in;
+@debug 1000ms <= 1s;
+
+// Relacional
+@debug 100 < 50;
+@debug 10px < 17px;
+@debug 96px >= 1in;
+@debug 1000ms <= 1s;
+
+// Numericas
+@debug 10s + 15s; // 25s
+@debug 1in - 10px; // 0.8958333333in
+@debug 5px * 3px; // 15px*px
+@debug 1in % 9px; // 0.0625in
+
+// Strings
+@debug "Helvetica" + " Neue"; // "Helvetica Neue"
+@debug sans- + serif; // sans-serif
+@debug sans - serif; // sans-serif

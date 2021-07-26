@@ -1,0 +1,10 @@
+$dog-types: 'german shepherd', 'pug', 'rotweiler', 'poodle';
+$more-dog-types: 'golden retriever', 'dachshund';
+
+// aceder ao primeiro valor
+@debug nth($dog-types, 1);
+
+// juntar duas listas em uma
+@debug join($dog-types, $more-dog-types, ',');
+
+

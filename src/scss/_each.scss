@@ -1,0 +1,23 @@
+// Com uma lista
+$sizes: 40px, 50px, 80px;
+
+@each $size in $sizes { 
+  .icon-#{$size} {
+    font-size: $size;
+    height: $size;
+    width: $size;
+  }
+}
+
+
+// Com um mapa
+$icons: ("eye": "👀", "start": "🏁", "stop": "🛑");
+
+@each $name, $glyph in $icons {
+  .icon-#{$name}:before {
+    display: inline-block;
+    font-family: "Icon Font";
+    content: $glyph;
+  }
+}
+
