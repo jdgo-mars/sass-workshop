@@ -1,34 +1,10 @@
 @use 'sass:math';
 
-$primary-color: #4f6799fd;
-
-@function set-text-color($color){
-  @if lightness($color) > 70 {
-    @return #333;
-  }
-  @else {
-    @return white;
-  }
-}
-
-
-
-
-
-
-
-html {
-  /* a cada 1rem será considera 10px */
-  font-size: 62.5%;
-}
-
 %font-base {
   font-family: "Source Sans Pro", Arial, sans-serif;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
 }
-
-$base-font-size: 16px;
 
 html,
 body {
@@ -36,8 +12,15 @@ body {
   height: 100vh;
 }
 
-body {
-  font-size: $base-font-size;
+html {
+  font-size: 0.6rem;
+  @include breakpoint(phone) {
+    font-size: 0.5rem;
+  }
+
+  @include breakpoint(tablet) {
+    font-size: 0.55rem;
+  }
 }
 
 input,
@@ -45,14 +28,23 @@ textarea {
   @extend %font-base;  
 }
 
-$heading-scale: 6; 
-@for $i from 1 through 6 {
-  h#{$i} {
-    font-size: $base-font-size + $heading-scale * (6 - $i);
-    color: rgb(75, 75, 75);
-  }
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
 
 main {
-  margin-bottom: 80px;
+  @include margin-sides(3,0,3,0);
 }
+
+$heading-scale: 1; 
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: $base-text-size * (7 - $i);
+    color: map-get($text-color, dark);
+  }
+}
+

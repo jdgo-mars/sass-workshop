@@ -1,0 +1,16 @@
+// color
+$primary-color: rgb(41,76,148);
+
+// text
+$base-text-size: 1rem;
+$text-color: (light: white, dark: #333);
+
+@function set-text-color($color){
+    @if lightness($color) > 70 {
+      @return map-get($text-color, dark);
+    }
+    @else {
+      @return map-get($text-color, light);
+    }
+  }
+  
