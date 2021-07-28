@@ -1,0 +1,29 @@
+// Ira conter os estilos associados a navegacao
+header {
+    background-color: $primary-color;
+    height: 50px;
+    nav {
+        display: flex;
+        justify-content: space-around;
+        height: 100%;
+
+        .menu-brand {
+            color: map-get($text-color, light);
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu-section {
+            display: flex;
+            align-items: center;
+
+            a {
+                text-transform: uppercase;
+                color: map-get($text-color, light);
+            }
+            
+        }
+    }
+
+}

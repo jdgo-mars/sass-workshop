@@ -1,23 +1,24 @@
-@use 'sass:math';
+@use 'sass:math'; // Referencia https://sass-lang.com/documentation/modules
 
 @function circle-area($radius) {
-    $area: math.$pi * math.pow($radius, 2);
-    @debug $area;
+    $area: math.$pi * math.pow($radius, 2); //Pi * radius ^ 2 
+    @debug $area; 
     @return $area;
 }
 
-@function sum($numbers...) {
-    $sum: 0;
-    @each $number in $numbers {
-      $sum: $sum + $number;
+@function sum($numbers...) { // Podemos passar n argumentos para a funcao
+    $sum: 0; // $sum e igual a 0
+    @each $number in $numbers { 
+      $sum: $sum + $number; // $sum vai ser igual ao valor anterior de $sum + $number
     }
     @debug $sum;
     @return $sum;
   }
   
+  $radius: 5;
   .class {
-    width: sum(10em, 30em, 50em);
-    height: circle-area(20);
+    width: sum(30em, 50em, 10em); // o valor de width sera 90em
+    height: circle-area(5);
   }
 
 

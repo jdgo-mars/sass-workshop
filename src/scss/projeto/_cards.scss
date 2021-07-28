@@ -1,0 +1,64 @@
+.cards { // para um conjunto de elements
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 90%;
+    max-width: 1024px;
+    margin: auto;
+    justify-content: center;
+    margin-top: 100px
+} 
+
+
+.card { // para um element .card
+    display: flex;
+    flex-direction: column;
+    background-color: $primary-color;
+    cursor: pointer;
+    height: 180px;
+    .text-medium {
+        font-size: 1.6rem;
+        color: map-get($text-color, light )
+    }
+
+    .content {
+        margin: 20px;
+      }
+  
+      .title {
+        margin-bottom: 20px;
+      }
+
+    .image {
+        width: 100%;
+        height: 180px;
+        overflow: hidden;
+        position: relative;
+  
+        & img {
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      .info {
+        display: flex;
+        align-self: end;
+        align-items: center;
+      }
+
+    .price {
+        display: inline-block;
+        margin-left: auto;
+        padding: 5px 20px;
+        border-radius: 20px;
+        background-color: lighten($primary-color, 10);
+        &:hover {
+          background-color: lighten($primary-color, 20);
+        }
+      }
+
+} 

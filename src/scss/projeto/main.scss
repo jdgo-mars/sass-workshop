@@ -1,6 +1,10 @@
+@import 'reset'; // limpar valores por defeito do browser
+@import '_settings'; // variaveis e definicoes do projeto
+@import '_base'; // estilizar elementos globais
+@import '_nav';
+@import '_hero';
+@import '_button'; 
+@import '_cards'; 
 
-@import '_reset';
-@import '_settings';
-@import '_base';
 
 

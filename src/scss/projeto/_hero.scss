@@ -1,0 +1,18 @@
+.hero {
+    background-image: url(https://www.portugalresident.com/wp-content/uploads/2020/09/shutterstock_721857286-Beautiful-bay-near-Lagos-town-Algarve-region-Portugal.jpg), linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.4),rgba(0,0,0,0) ); // quero ter uma imagem no background
+    background-size: cover; // https://developer.mozilla.org/pt-BR/docs/Web/CSS/background-size
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-blend-mode: overlay;
+    .container {
+        width: 90%;
+        max-width: 1024px;
+        margin: auto;
+    }
+
+    h2, h4 {
+        color: map-get($text-color, light);
+    }
+}

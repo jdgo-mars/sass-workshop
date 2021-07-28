@@ -2,7 +2,7 @@
 
 %font-base {
   font-family: "Source Sans Pro", Arial, sans-serif;
-  text-rendering: optimizelegibility;
+  text-rendering: optimizelegibility; // https://developer.mozilla.org/pt-BR/docs/Web/CSS/text-rendering
   -webkit-font-smoothing: antialiased;
 }
 
@@ -21,8 +21,14 @@ textarea {
   @extend %font-base;  
 }
 
-ul li {
-  list-style: none;
+ul {
+    display: flex;
+    li {
+    list-style: none;
+    &:last-child {
+      padding-left: 5px;
+    }
+  }
 }
 
 a {
