@@ -14,13 +14,6 @@ body {
 
 html {
   font-size: 0.6rem;
-  @include breakpoint(phone) {
-    font-size: 0.5rem;
-  }
-
-  @include breakpoint(tablet) {
-    font-size: 0.55rem;
-  }
 }
 
 input,
@@ -37,13 +30,12 @@ a {
 }
 
 main {
-  @include margin-sides(3,0,3,0);
+  margin: 48px 0;
 }
 
-$heading-scale: 1; 
 @for $i from 1 through 6 {
   h#{$i} {
-    font-size: $base-text-size * (7 - $i);
+    font-size: 0.6rem * (7 - $i);
     color: map-get($text-color, dark);
   }
 }
