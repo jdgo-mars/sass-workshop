@@ -1,0 +1,58 @@
+%button-sans {
+  font-family: sans-serif;
+}
+  
+%button-serif {
+  font-family: serif;
+}
+  
+%button-base {
+  text-align: center;
+  font-size: 20px;
+  position: relative;
+  text-align: center;
+  color: #fff;
+  padding: 12px 43px;
+  border: 3px solid #fff;
+  display: inline-block;
+  margin: auto;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  @extend %button-sans;
+}
+
+// Definir a variavel global
+$button-success-color: #28a745;
+
+
+$border-radius-low: 8px;
+$border-radius-high: 16px;
+
+// font size
+$p-font-size: 14px;
+$h1-fz: 50px;
+
+
+.button-success {
+  @extend %button-base;
+  // Usar a variavel
+  background-color: $button-success-color;
+  border-radius: $border-radius-high;
+}
+
+.button-warning {
+  @extend %button-base;
+  border-radius: $border-radius-low;
+  background-color: $button-success-color;
+  
+}
+
+.button-alert {
+  @extend %button-base;
+  background-color: #dc3545;
+}
+
+p {
+  margin-top: 16px;
+  font-size: $p-font-size;
+}

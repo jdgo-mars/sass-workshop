@@ -1,6 +1,6 @@
 tasks:
   - init: npm install
-    command: npm run dev
+    command: npm run projeto
 ports:
-  - port: 5000
+  - port: 3000
     onOpen: open-preview

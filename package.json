@@ -4,7 +4,9 @@
   "description": "Sass workshop for Flag",
   "main": "index.js",
   "scripts": {
-    "dev": "node_modules/.bin/concurrently \"node_modules/.bin/sass -w src/scss/main.scss assets/css/styles.css\" \"serve\"",
+    "conceitos": "node_modules/.bin/concurrently \"node_modules/.bin/sass -w src/scss/conceitos/main.scss assets/css/conceitos/styles.css\" \"npx browser-sync start -s -w --index @conceitos.html\"",
+    "projeto": "node_modules/.bin/concurrently \"node_modules/.bin/sass -w src/scss/projeto/main.scss assets/css/projeto/styles.css\" \"npx browser-sync start -s -w --index @projeto.html\"",
+
     "deploy": "node_modules/.bin/surge"
   },
   "repository": {

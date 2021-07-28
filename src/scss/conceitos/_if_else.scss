@@ -1,10 +1,11 @@
-  
+  @use 'sass:math';
+
   // Geometry Example
   @mixin geometry($size, $border-radius: false) {
     width: $size;
     height: $size;
     @if $border-radius {
-      border-radius: $size / 2;
+      border-radius: math.div($size, 2); // o mesmo que `$size / 2`
     }
   }
   

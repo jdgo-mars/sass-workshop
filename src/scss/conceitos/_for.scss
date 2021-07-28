@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $h1-fontsize: 60px;
 // iteracao 1 a variavel $i sera 1
 // iteracao 2 a variavel $i sera 2
@@ -5,8 +7,7 @@ $h1-fontsize: 60px;
 // iteracao 6 a variavel $i sera 6
 @for $i from 1 through 6 {
   h#{$i} { // iter 1 = h1 ... h6
-    background-color: rgb(6, 175, 241);
-    font-size: $h1-fontsize / $i;
+    font-size: math.div($h1-fontsize,$i);
   }
 }
 // type scale -> https://type-scale.com/

@@ -1,0 +1,58 @@
+@use 'sass:math';
+
+$primary-color: #4f6799fd;
+
+@function set-text-color($color){
+  @if lightness($color) > 70 {
+    @return #333;
+  }
+  @else {
+    @return white;
+  }
+}
+
+
+
+
+
+
+
+html {
+  /* a cada 1rem será considera 10px */
+  font-size: 62.5%;
+}
+
+%font-base {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+  text-rendering: optimizelegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+$base-font-size: 16px;
+
+html,
+body {
+  @extend %font-base;
+  height: 100vh;
+}
+
+body {
+  font-size: $base-font-size;
+}
+
+input,
+textarea {
+  @extend %font-base;  
+}
+
+$heading-scale: 6; 
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: $base-font-size + $heading-scale * (6 - $i);
+    color: rgb(75, 75, 75);
+  }
+}
+
+main {
+  margin-bottom: 80px;
+}
